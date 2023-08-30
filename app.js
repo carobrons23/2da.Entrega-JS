@@ -149,7 +149,7 @@ function agregarItemAlCarrito(titulo, precio, imagenSrc) {
         }
     }
 
-    var itemCarritoContenido = 
+    var itemCarritoContenido = `
     <div class="carrito-item">
         <img src="${imagenSrc}" alt="pulsera carrito" width="80px"></img>
         <div class="carrito-item-detalles">
@@ -165,7 +165,7 @@ function agregarItemAlCarrito(titulo, precio, imagenSrc) {
             <i class="fa-solid fa-trash"></i>
         </span>
     </div>
-    
+    `
 
     item.innerHTML = itemCarritoContenido;
     itemsCarrito.append(item);
