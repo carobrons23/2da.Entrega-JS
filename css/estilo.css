@@ -142,23 +142,22 @@ header .fa-bars {
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 10px;
+    padding: 30px;
     contain: paint;
 }
 .contenedor .contenedor-items {
-    margin: 30px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 30px;
-    grid-row-gap: 30px;
+    gap: 60px;
+    grid-row-gap: 10px;
     width: 100%;
     transition: .3s;
 }
 .contenedor .contenedor-items .item {
     width: 250px;
     padding: 10px;
-    margin: 0 auto;
-    border: 3px solid #666;
+    margin: auto;
+    border: 2px solid #666;
     border-radius: 10px;
     transition: .3s;
 }
@@ -211,14 +210,18 @@ header .fa-bars {
     background-color: #000;
     color: #fff;
     text-align: center;
-    padding: 30px 0 ;
+    padding: 10px 0 ;
+}
+.carrito .header-carrito h2 {
+    font-size: 20px;
+    margin: 0 auto;
 }
 .carrito .carrito-item {
     display: flex;
     align-items: center;
     position: relative;
     border-bottom: 1px solid #666;
-    padding: 20px;
+    padding: 10px;
 }
 .carrito .carrito-item img {
     margin-right: 20px;
@@ -228,6 +231,7 @@ header .fa-bars {
     font-weight: bold;
     margin-bottom: 10px;
     text-transform: uppercase;
+    font-size: 15px;
 }
 .carrito .carrito-item .selector-cantidad {
     display: inline-block;
@@ -258,13 +262,13 @@ header .fa-bars {
     font-size: 18px;
     margin-bottom: 5px;
 }
-.carrito .carrito-item .btn.eliminar {
+.carrito .carrito-item .btn-eliminar {
     position: absolute;
-    right: 15px;
-    top: 15px;
+    right: 10px;
+    top: 10px;
     color: #000;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     line-height: 40px;
     text-align: center;
     border-radius: 50%;
@@ -288,6 +292,12 @@ header .fa-bars {
     font-size: 22px;
     font-weight: bold;
     margin-bottom: 10px;
+}
+.carrito-total .fila strong {
+    font-size: 18px;
+}
+.carrito-total .carrito-precio-total {
+    font-size: 18px;
 }
 .carrito-total .btn-pagar {
     display: block;

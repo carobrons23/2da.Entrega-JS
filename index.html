@@ -48,84 +48,78 @@
             <div class="contenedor-items">
                 <div class="item">
                     <span class="titulo-item">Anillos</span>
-                    <img src="./img/anillo1.jpg" alt="img anillo">
+                    <img src="./img/anillo1.jpg" alt="img anillo" class="img-item">
                     <span class="precio-item">$7.000</span>
                     <button class="boton-item">Agregar al Carrito</button>
                 </div>
                 <div class="item">
                     <span class="titulo-item">Pulseras</span>
-                    <img src="./img/pulsera1.jpg" alt="img anillo">
+                    <img src="./img/pulsera1.jpg" alt="img anillo" class="img-item">
                     <span class="precio-item">$5.000</span>
                     <button class="boton-item">Agregar al Carrito</button>
                 </div>
                 <div class="item">
                     <span class="titulo-item">Collares</span>
-                    <img src="./img/collar1.jpg" alt="img anillo">
+                    <img src="./img/collar1.jpg" alt="img anillo" class="img-item">
                     <span class="precio-item">$6.500</span>
                     <button class="boton-item">Agregar al Carrito</button>
                 </div>
                 <div class="item">
                     <span class="titulo-item">Aritos</span>
-                    <img src="./img/aritos1.jpg" alt="img anillo">
+                    <img src="./img/aritos1.jpg" alt="img anillo" class="img-item">
                     <span class="precio-item">$4.500</span>
                     <button class="boton-item">Agregar al Carrito</button>
                 </div>
             </div>
+
+            <!--- carrito de compras --->
+            <div class="carrito">
+                <div class="header-carrito">
+                    <h2>Tu Carrito</h2>
+                </div>
+                <div class="carrito-items">
+                    <div class="carrito-item">
+                        <img src="./img/pulsera1.jpg" alt="pulsera carrito" width="80px">
+                        <div class="carrito-item-detalles">
+                            <span class="carrito-item-titulo">Pulsera</span>
+                            <div class="selector-cantidad">
+                                <i class="fa-solid fa-minus restar-cantidad"></i>
+                                <input type="text" value="1" class="carrito-item-cantidad" disabled>
+                                <i class="fa-solid fa-plus sumar-cantidad"></i>
+                            </div>
+                            <span class="carrito-item-precio">$5.000</span>
+                        </div>
+                        <span class="btn-eliminar">
+                            <i class="fa-solid fa-trash"></i>
+                        </span>
+                    </div>
+
+                    <div class="carrito-item">
+                        <img src="./img/aritos1.jpg" alt="aritos carrito" width="80px">
+                        <div class="carrito-item-detalles">
+                            <span class="carrito-item-titulo">Aritos</span>
+                            <div class="selector-cantidad">
+                                <i class="fa-solid fa-minus restar-cantidad"></i>
+                                <input type="text" value="2" class="carrito-item-cantidad">
+                                <i class="fa-solid fa-plus sumar-cantidad"></i>
+                            </div>
+                            <span class="carrito-item-precio">$4.500</span>
+                        </div>
+                        <span class="btn-eliminar">
+                            <i class="fa-solid fa-trash"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="carrito-total">
+                    <div class="fila">
+                        <strong>Tu Total</strong>
+                        <span class="carrito-precio-total">$20.000</span>
+                    </div>
+                    <button class="btn-pagar">Pagar<i class="fa-solid fa-bag-shopping"></i></button>
+                </div>
+            </div>
         </section>
     </main>
-
-    <!--- carrito de compras --->
-    <div class="carrito">
-        <div class="header-carrito">
-            <h2>Tu Carrito</h2>
-        </div>
-
-        <div class="carrito-items">
-            <!--
-                
-            <div class="carrito-item">
-                <img src="./img/pulsera1.jpg" alt="pulsera carrito" width="80px">
-                <div class="carrito-item-detalles">
-                    <span class="carrito-item-titulo">Pulsera</span>
-                    <div class="selector-cantidad">
-                        <i class="fa-solid fa-minus restar-cantidad"></i>
-                        <input type="text" value="1" class="carrito-item-cantidad" disabled>
-                        <i class="fa-solid fa-plus sumar-cantidad"></i>
-                    </div>
-                    <span class="carrito-item-precio">$5.000</span>
-                </div>
-                <span class="btn-eliminar">
-                    <i class="fa-solid fa-trash"></i>
-                </span>
-            </div>
-
-            <div class="carrito-item">
-                <img src="./img/aritos1.jpg" alt="aritos carrito" width="80px">
-                <div class="carrito-item-detalles">
-                    <span class="carrito-item-titulo">Aritos</span>
-                    <div class="selector-cantidad">
-                        <i class="fa-solid fa-minus restar-cantidad"></i>
-                        <input type="text" value="2" class="carrito-item-cantidad">
-                        <i class="fa-solid fa-plus sumar-cantidad"></i>
-                    </div>
-                    <span class="carrito-item-precio">$4.500</span>
-                </div>
-                <span class="btn-eliminar">
-                    <i class="fa-solid fa-trash"></i>
-                </span>
-            </div>
-            -->
-        </div>
-
-        <div class="carrito-total">
-            <div class="fila">
-                <strong>Tu Total</strong>
-                <span class="carrito-precio-total">$20.000</span>
-            </div>
-            <button class="btn-pagar">Pagar<i class="fa-solid fa-bag-shopping"></i></button>
-        </div>
-
-    </div>
 
     <footer class="pie-pagina">
         <div class="grupo-1">

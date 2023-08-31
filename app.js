@@ -18,21 +18,21 @@ function ready() {
 
     //Agrego funcionalidad al boton de sumar cantidad
     var botonesSumarCantidad = document.getElementsByClassName('sumar-cantidad');
-    for (var i = 0; i < botonesSumarCantidad.length; i++) {
+    for (var i=0; i < botonesSumarCantidad.length;i++) {
         var button = botonesSumarCantidad[i];
         button.addEventListener('click', sumarCantidad);
     }
 
     //Agrego funcionalidad al boton restar cantidad
     var botonesRestarCantidad = document.getElementsByClassName('restar-cantidad');
-    for (var i = 0; i < botonesRestarCantidad.length; i++) {
+    for (var i=0; i < botonesRestarCantidad.length;i++) {
         var button = botonesRestarCantidad[i];
         button.addEventListener('click', restarCantidad);
     }
 
     //Agrego funcionalidad a los botones Agregar al carrito
     var botonesAgregarAlCarrito = document.getElementsByClassName('boton-item');
-    for (var i = 0; i < botonesAgregarAlCarrito.length; i++) {
+    for (var i=0; i < botonesAgregarAlCarrito.length;i++) {
         var button = botonesAgregarAlCarrito[i];
         button.addEventListener('click', agregaAlCarritoClicked);
     }
@@ -62,28 +62,28 @@ function actualizarTotalCarrito() {
     var total = 0;
 
     //elementos del carrito para actualizar el total
-    for (var i = 0; i < carritoItems.length; i++) {
+    for (var i=0; i < carritoItems.length;i++) {
         var item = carritoItems[i];
         var precioElemento = item.getElementsByClassName('carrito-item-precio')[0];
         console.log(precioElemento);
         //Saco el simbolo peso y el punto de milesiomo
-        var precio = perseFloat(precioElemento.innerText - replace('$', '').replace('', ''));
+        var precio = perseFloat(precioElemento.innerText.replace('$','').replace('',''));
         console.log(precio)
         var cantidadItem = item.getElementsByClassName('carrito-item-cantidad')[0];
         var cantidad = cantidadItem.value;
         console.log(cantidad);
         total = total + (precio * cantidad);
     }
-    total = Math.round(total * 100) / 100;
-    document.getElementsByClassName('carrito-precio.total')[0].innerText = '$' + total.toLocaleString("es") + ',00';
+    total = Math.round(total*100)/100;
+    document.getElementsByClassName('carrito-precio-total')[0].innerText = '$' + total.toLocaleString("es") + ',00';
 }
 
 function ocultarCarrito() {
     var carritoItems = document.getElementsByClassName('carrito-items')[0];
-    if (carritoItems.childElementCount == 0) {
+    if (carritoItems.childElementCount==0) {
         var carrito = document.getElementsByClassName('carrito')[0];
         carrito.style.marginRight = '-100%';
-        carrito.style.opacity = '0';
+        carrito.style.opacity='0';
         carritoVisible = false;
 
         //maximizo el contenedor de los elementos
@@ -112,7 +112,7 @@ function restarCantidad(event) {
     cantidadActual--;
 
     //Controlo que no sea menor que 1
-    if (cantidadActual >= 1) {
+    if (cantidadActual>=1) {
         selector.getElementsByClassName('carrito-item-cantidad')[0].value = cantidadActual;
         //Actualizo el total
         actualizarTotalCarrito();
@@ -125,7 +125,7 @@ function agregaAlCarritoClicked(event) {
     var titulo = item.getElementsByClassName('titulo-item')[0].innerText;
     console.log(titulo);
     var precio = item.getElementsByClassName('precio-item')[0].innerText;
-    var imagenSrc = item.getElementsByClassName('img.item')[0].src;
+    var imagenSrc = item.getElementsByClassName('img-item')[0].src;
     console.log(imagenSrc);
 
     //Esta funcion agrega el elemento al carrito, por parametro los valores
@@ -183,7 +183,7 @@ function agregarItemAlCarrito(titulo, precio, imagenSrc) {
 }
 
 function pagarClicked(event) {
-    alert("Gracias por su compra");
+    alert("Su compra se ha realizado con éxito. Muchas Gracias!");
     //Elimino todos los elementos del carrito
     var carritoItems = document.getElementsByClassName('carrito-items')[0];
     while (carritoItems.hasChildNodes()) {
